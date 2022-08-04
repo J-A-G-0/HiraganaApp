@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/correct_tv"
+        android:layout_width="280dp"
+        android:layout_height="440dp"
+        android:gravity="center"
+        android:text="Well done!"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.286" />
+
+    <TextView
+        android:id="@+id/incorrect_tv"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text=""
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/rtn_button"
+        app:layout_constraintEnd_toEndOf="@+id/correct_tv"
+        app:layout_constraintStart_toStartOf="@+id/correct_tv"
+        app:layout_constraintTop_toTopOf="@+id/correct_tv"
+        app:layout_constraintVertical_bias="0.963" />
+
+    <Button
+        android:id="@+id/rtn_button"
+        android:layout_width="130dp"
+        android:layout_height="56dp"
+        android:text="Return"
+        app:layout_constraintBottom_toBottomOf="@+id/correct_tv"
+        app:layout_constraintEnd_toEndOf="@+id/correct_tv"
+        app:layout_constraintStart_toStartOf="@+id/correct_tv"
+        app:layout_constraintTop_toTopOf="@+id/correct_tv"
+        app:layout_constraintVertical_bias="0.728" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

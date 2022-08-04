@@ -1,0 +1,48 @@
+<resources>
+    <string name="app_name">Hiragana_Homepage</string>
+    <string name="ahab">Speak not to me of blasphemy man! I\'d strike the sun if it insulted me</string>
+    <string name="mnemonic_a">Placeholder Mnemonic Text</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="what_next">Congratulations! You\'ve now studied all 46 Hiragana. No small achievement!
+        \n So, what next? You can continue to review the Hiragana here, until you feel completely comfortable with all of them.
+        We would also recommeding that you check out some of the other great Japanese learning resources out there, so that you
+        can start to see Hiragana in context, build your reading fluency and begin learning you first Japanese vocabulary!
+        For more in-depth advice, why not visit the Information page!
+    </string>
+    <string name="doneByDeadline">Congratulations! You\'ve now studied all 46 Hiragana, and not only that
+        you\'ve done it by the deadline you set yourself! Well done, that\'s no small achievement!
+        \n So, what next? You can continue to review the Hiragana here, until you feel completely comfortable with all of them.
+        We would also recommeding that you check out some of the other great Japanese learning resources out there.
+        For more in-depth advice, why not visit the Information page! </string>
+    <string name="infoRecommendedMaterials">Placeholder</string>
+    <string name="infoStrugglingSimilar">Placeholder</string>
+    <string name="infoStrugglingListening">Placeholder</string>
+    <string name="infoWriting">Placeholder</string>
+    <string name="infoWhatNext">Placeholder</string>
+
+    <string name="title_welcome">Welcome!</string>
+    <string name="title_audio">Are you able to listen to audio?</string>
+    <string name ="title_otherMats">Is this the only way you\'re studying?</string>
+    <string name="title_time">Do you have enough time?</string>
+    <string name="title_conclusion">Let\'s get started!</string>
+
+
+    <string name="desc_welcome">\n Welcome to our Hiragana app! We look forward to learning with you.
+        \n\n Just before we begin, there\'s a few quick things we want to make you aware of…</string>
+    <string name="desc_audio">
+    \n While it is possible to complete the activities without audio, we would always recommend that
+    you listen as you study, to better grasp the pronunciation of the different Hiragana.</string>
+    <string name ="desc_otherMats">\n We recommend using this app in conjunction with other Japanese
+    learning apps. Since we\'re only covering Hiragana here, we would strongly advise using our app
+    in conjunction with a broader Japanese learning app. That way, you\'ll be seeing Hiragana in complete
+    words from the beginning! </string>
+    <string name="desc_time">\n While there are only 46 Hiragana, compared with thousands of Kanji,
+    it is still important to note that it may take a couple of weeks of daily study before you\'ve really
+    got them hammered down. \n\n Don\'t be afraid to focus on other areas of the language that you\'re
+    struggling with now, and come back here when you\'re feeling ready!</string>
+    <string name="desc_conclusion">\n With that out of the way, let\'s get started on learning!
+    \n\n Check out the info page if there\'s anything else you need help with.
+    \n\n がんばってね！</string>
+
+</resources>

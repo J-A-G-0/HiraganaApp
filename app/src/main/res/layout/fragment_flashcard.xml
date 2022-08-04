@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FlashcardFragment">
+
+    <ImageView
+        android:id="@+id/flashcardImage"
+        android:layout_width="376dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/mi" />
+
+    <Button
+        android:id="@+id/button_drawing"
+        android:layout_width="103dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:text="Drawing"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="@+id/flashcardImage"
+        app:layout_constraintStart_toStartOf="@+id/flashcardImage"
+        app:layout_constraintTop_toBottomOf="@id/flashcardImage" />
+
+    <Button
+        android:id="@+id/audio_button"
+        android:layout_width="103dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:text="Audio"
+        android:textSize="13sp"
+        android:onClick="playAudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_drawing"
+        app:layout_constraintTop_toBottomOf="@id/flashcardImage" />
+
+    <Button
+        android:id="@+id/button_hiragana"
+        android:layout_width="103dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="20dp"
+        android:text="ひらがな"
+        app:layout_constraintEnd_toStartOf="@+id/button_drawing"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flashcardImage" />
+
+    <TextView
+        android:id="@+id/textView_mnemonic"
+        android:layout_width="376dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="24dp"
+        android:autoSizeTextType="uniform"
+        android:gravity="center"
+        android:text="Mnemonic here"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/button_drawing" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

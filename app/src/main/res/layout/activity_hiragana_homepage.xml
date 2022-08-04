@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/baby_pink">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/image_header"
+            android:layout_width="183dp"
+            android:layout_height="149dp"
+            android:paddingBottom="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_i"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mishima_barakei" />
+
+        <LinearLayout
+            android:id="@+id/nextStudy_view"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:padding="40dp"
+            android:layout_marginBottom="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/review_view"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_header"
+            android:background="@drawable/round_back_babypink_10"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/btn_next_lesson"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:text="Next Lesson" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/review_view"
+            android:layout_width="240dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:padding="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/button_u"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nextStudy_view"
+            android:background="@drawable/round_back_babypink_10"
+            android:orientation="horizontal" >>
+            <Button
+                android:id="@+id/btn_review"
+                android:layout_width="220dp"
+                android:layout_height="50dp"
+                android:text="Review" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_a"
+            style="@style/HomepageButtonStyle"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="あ"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_i"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review_view" />
+
+        <Button
+            android:id="@+id/button_i"
+            style="@style/HomepageButtonStyle"
+            android:text="い"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_u"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_a"
+            app:layout_constraintTop_toBottomOf="@id/review_view" />
+
+        <Button
+            android:id="@+id/button_u"
+            style="@style/HomepageButtonStyle"
+            android:text="う"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_e"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_i"
+            app:layout_constraintTop_toBottomOf="@id/review_view" />
+
+        <Button
+            android:id="@+id/button_e"
+            style="@style/HomepageButtonStyle"
+            android:text="え"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toStartOf="@+id/button_o"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_u"
+            app:layout_constraintTop_toBottomOf="@id/review_view" />
+
+        <Button
+            android:id="@+id/button_o"
+            style="@style/HomepageButtonStyle"
+            android:text="お"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_e"
+            app:layout_constraintTop_toBottomOf="@id/review_view" />
+
+        <Button
+            android:id="@+id/button_ka"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="か"
+            app:layout_constraintEnd_toStartOf="@+id/button_ki"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_a" />
+
+        <Button
+            android:id="@+id/button_ki"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="き"
+            app:layout_constraintEnd_toStartOf="@+id/button_ku"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ka"
+            app:layout_constraintTop_toBottomOf="@+id/button_i" />
+
+        <Button
+            android:id="@+id/button_ku"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="く"
+            app:layout_constraintEnd_toStartOf="@+id/button_ke"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ki"
+            app:layout_constraintTop_toBottomOf="@+id/button_u" />
+
+        <Button
+            android:id="@+id/button_ke"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="け"
+            app:layout_constraintEnd_toStartOf="@+id/button_ko"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ku"
+            app:layout_constraintTop_toBottomOf="@+id/button_e" />
+
+        <Button
+            android:id="@+id/button_ko"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="こ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ke"
+            app:layout_constraintTop_toBottomOf="@+id/button_o" />
+
+        <Button
+            android:id="@+id/button_sa"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="さ"
+            app:layout_constraintEnd_toStartOf="@+id/button_shi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_ka" />
+
+        <Button
+            android:id="@+id/button_shi"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="し"
+            app:layout_constraintEnd_toStartOf="@+id/button_su"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_sa"
+            app:layout_constraintTop_toBottomOf="@+id/button_ki" />
+
+        <Button
+            android:id="@+id/button_su"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="す"
+            app:layout_constraintEnd_toStartOf="@+id/button_se"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_shi"
+            app:layout_constraintTop_toBottomOf="@+id/button_ku" />
+
+        <Button
+            android:id="@+id/button_se"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="せ"
+            app:layout_constraintEnd_toStartOf="@+id/button_so"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_su"
+            app:layout_constraintTop_toBottomOf="@+id/button_ke" />
+
+        <Button
+            android:id="@+id/button_so"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="そ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_se"
+            app:layout_constraintTop_toBottomOf="@+id/button_ko" />
+
+        <Button
+            android:id="@+id/button_ta"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="た"
+            app:layout_constraintEnd_toStartOf="@+id/button_chi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_sa" />
+
+        <Button
+            android:id="@+id/button_chi"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ち"
+            app:layout_constraintEnd_toStartOf="@+id/button_tsu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ta"
+            app:layout_constraintTop_toBottomOf="@+id/button_shi" />
+
+
+        <Button
+            android:id="@+id/button_tsu"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="つ"
+            app:layout_constraintEnd_toStartOf="@+id/button_te"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_chi"
+            app:layout_constraintTop_toBottomOf="@+id/button_su" />
+
+        <Button
+            android:id="@+id/button_te"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="て"
+            app:layout_constraintEnd_toStartOf="@+id/button_to"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_tsu"
+            app:layout_constraintTop_toBottomOf="@+id/button_se" />
+
+
+        <Button
+            android:id="@+id/button_to"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="と"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_te"
+            app:layout_constraintTop_toBottomOf="@+id/button_so" />
+
+        <Button
+            android:id="@+id/button_na"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="な"
+            app:layout_constraintEnd_toStartOf="@+id/button_ni"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_ta" />
+
+        <Button
+            android:id="@+id/button_ni"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="に"
+            app:layout_constraintEnd_toStartOf="@+id/button_nu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_na"
+            app:layout_constraintTop_toBottomOf="@+id/button_chi" />
+
+
+        <Button
+            android:id="@+id/button_nu"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ぬ"
+            app:layout_constraintEnd_toStartOf="@+id/button_ne"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ni"
+            app:layout_constraintTop_toBottomOf="@+id/button_tsu" />
+
+        <Button
+            android:id="@+id/button_ne"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ね"
+            app:layout_constraintEnd_toStartOf="@+id/button_no"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_nu"
+            app:layout_constraintTop_toBottomOf="@+id/button_te" />
+
+        <Button
+            android:id="@+id/button_no"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="の"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ne"
+            app:layout_constraintTop_toBottomOf="@+id/button_to" />
+
+        <Button
+            android:id="@+id/button_ha"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="は"
+            app:layout_constraintEnd_toStartOf="@+id/button_hi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_na" />
+
+
+        <Button
+            android:id="@+id/button_hi"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ひ"
+            app:layout_constraintEnd_toStartOf="@+id/button_fu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ha"
+            app:layout_constraintTop_toBottomOf="@+id/button_ni" />
+
+        <Button
+            android:id="@+id/button_fu"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ふ"
+            app:layout_constraintEnd_toStartOf="@+id/button_he"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_hi"
+            app:layout_constraintTop_toBottomOf="@+id/button_nu" />
+
+        <Button
+            android:id="@+id/button_he"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="へ"
+            app:layout_constraintEnd_toStartOf="@+id/button_ho"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_fu"
+            app:layout_constraintTop_toBottomOf="@+id/button_ne" />
+
+
+        <Button
+            android:id="@+id/button_ho"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ほ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_he"
+            app:layout_constraintTop_toBottomOf="@+id/button_no" />
+
+
+        <Button
+            android:id="@+id/button_ma"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ま"
+            app:layout_constraintEnd_toStartOf="@+id/button_mi"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_ha" />
+
+
+        <Button
+            android:id="@+id/button_mi"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="み"
+            app:layout_constraintEnd_toStartOf="@+id/button_mu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ma"
+            app:layout_constraintTop_toBottomOf="@+id/button_hi" />
+
+        <Button
+            android:id="@+id/button_mu"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="む"
+            app:layout_constraintEnd_toStartOf="@+id/button_me"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_mi"
+            app:layout_constraintTop_toBottomOf="@+id/button_fu" />
+
+        <Button
+            android:id="@+id/button_me"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="め"
+            app:layout_constraintEnd_toStartOf="@+id/button_mo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_mu"
+            app:layout_constraintTop_toBottomOf="@+id/button_he" />
+
+
+        <Button
+            android:id="@+id/button_mo"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="も"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_me"
+            app:layout_constraintTop_toBottomOf="@+id/button_ho" />
+
+        <Button
+            android:id="@+id/button_ya"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="や"
+            app:layout_constraintEnd_toStartOf="@+id/button_yu"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_mi" />
+
+
+        <Button
+            android:id="@+id/button_yu"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ゆ"
+            app:layout_constraintEnd_toStartOf="@+id/button_yo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ya"
+            app:layout_constraintTop_toBottomOf="@+id/button_mu" />
+
+
+        <Button
+            android:id="@+id/button_yo"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="よ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_yu"
+            app:layout_constraintTop_toBottomOf="@+id/button_mo" />
+
+        <Button
+            android:id="@+id/button_ra"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ら"
+            app:layout_constraintEnd_toStartOf="@+id/button_ri"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_ya" />
+
+
+        <Button
+            android:id="@+id/button_ri"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="り"
+            app:layout_constraintEnd_toStartOf="@+id/button_ru"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ra"
+            app:layout_constraintTop_toBottomOf="@+id/button_ya" />
+
+        <Button
+            android:id="@+id/button_ru"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="る"
+            app:layout_constraintEnd_toStartOf="@+id/button_re"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ri"
+            app:layout_constraintTop_toBottomOf="@+id/button_yu" />
+
+        <Button
+            android:id="@+id/button_re"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="れ"
+            app:layout_constraintEnd_toStartOf="@+id/button_ro"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_ru"
+            app:layout_constraintTop_toBottomOf="@+id/button_yo" />
+
+
+        <Button
+            android:id="@+id/button_ro"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ろ"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_re"
+            app:layout_constraintTop_toBottomOf="@+id/button_yo" />
+
+        <Button
+            android:id="@+id/button_wa"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="わ"
+            app:layout_constraintEnd_toStartOf="@+id/button_wo"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_ri" />
+
+
+        <Button
+            android:id="@+id/button_wo"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="を"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_wa"
+            app:layout_constraintTop_toBottomOf="@+id/button_ro" />
+
+
+        <Button
+            android:id="@+id/button_n"
+            style="@style/HomepageButtonStyle"
+            android:layout_marginTop="28dp"
+            android:text="ん"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_wo" />
+
+
+        <ImageButton
+            android:id="@+id/button_info"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:backgroundTint="#C5BCF6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_info_24"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/button_stats"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:backgroundTint="#C5BCF6"
+            android:foregroundTint="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_baseline_query_stats_24"
+            app:tint="@color/white" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

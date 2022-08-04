@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="115dp"
+    android:layout_height="190dp"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    cardview:cardCornerRadius="4dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+        <ImageView
+            android:id="@+id/imv_hiragana_img"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:scaleType="centerCrop"
+            android:background="#2d2d2d"/>
+
+        <TextView
+            android:id="@+id/tv_current_level"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:layout_height="match_parent"
+            android:text="Current Level:"
+            android:textColor="#2d2d2d"
+            android:gravity="center"
+            />
+
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

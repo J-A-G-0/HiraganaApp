@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    app:flow_horizontalAlign="center">
+
+
+    <ImageView
+        android:id="@+id/titleImage"
+        android:layout_width="240dp"
+        android:layout_height="240dp"
+        android:layout_marginTop="30dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/sakaguchi_ango" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Title here"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
+
+    <TextView
+        android:id="@+id/tvContents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="5dp"
+        android:text="Contents here"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="@color/black"/>
+
+
+</LinearLayout>

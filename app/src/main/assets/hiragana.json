@@ -1,0 +1,232 @@
+[
+    {
+      "latin": "a",
+      "hiragana": "あ",
+      "mnemonic": "placeholder"
+    },
+    {
+      "latin": "i",
+      "hiragana": "い",
+      "mnemonic": "placeholder"
+    },
+    {
+      "latin": "u",
+      "hiragana": "う",
+      "mnemonic": "placeholder"
+    },
+    {
+      "latin": "e",
+      "hiragana": "え",
+      "mnemonic": "placeholder"
+    },
+    {
+      "latin": "o",
+      "hiragana": "お",
+      "mnemonic": "placeholder"
+    },
+  {
+    "latin": "ka",
+    "hiragana": "か",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ki",
+    "hiragana": "き",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ku",
+    "hiragana": "く",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ke",
+    "hiragana": "け",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ko",
+    "hiragana": "こ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "sa",
+    "hiragana": "さ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "shi",
+    "hiragana": "し",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "su",
+    "hiragana": "す",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "se",
+    "hiragana": "せ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "so",
+    "hiragana": "そ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ta",
+    "hiragana": "た",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "chi",
+    "hiragana": "ち",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "tsu",
+    "hiragana": "つ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "te",
+    "hiragana": "て",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "to",
+    "hiragana": "と",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "na",
+    "hiragana": "な",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ni",
+    "hiragana": "に",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "nu",
+    "hiragana": "ぬ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ne",
+    "hiragana": "ね",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "no",
+    "hiragana": "の",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ha",
+    "hiragana": "は",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "hi",
+    "hiragana": "ひ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "fu",
+    "hiragana": "ふ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "he",
+    "hiragana": "へ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ho",
+    "hiragana": "ほ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ma",
+    "hiragana": "ま",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "mi",
+    "hiragana": "み",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "mu",
+    "hiragana": "む",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "me",
+    "hiragana": "め",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "mo",
+    "hiragana": "も",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ya",
+    "hiragana": "や",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "yu",
+    "hiragana": "ゆ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "yo",
+    "hiragana": "よ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ra",
+    "hiragana": "ら",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ri",
+    "hiragana": "り",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ru",
+    "hiragana": "る",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "re",
+    "hiragana": "れ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "ro",
+    "hiragana": "ろ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "wa",
+    "hiragana": "わ",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "wo",
+    "hiragana": "を",
+    "mnemonic": "placeholder"
+  },
+  {
+    "latin": "n",
+    "hiragana": "ん",
+    "mnemonic": "placeholder"
+  }
+]
