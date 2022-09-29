@@ -6,6 +6,8 @@
         <entry key="app/src/main/res/drawable-anydpi/ic_user_settings.xml" value="0.3455" />
         <entry key="app/src/main/res/drawable-anydpi/ic_user_stats.xml" value="0.3455" />
         <entry key="app/src/main/res/drawable-mdpi/round_back_babypink_10.xml" value="0.2725" />
+        <entry key="app/src/main/res/drawable/ic_baseline_access_time_filled_24.xml" value="0.512" />
+        <entry key="app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.512" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.3455" />
         <entry key="app/src/main/res/drawable/mishima_barakei.xml" value="0.3455" />
         <entry key="app/src/main/res/drawable/round_back_green10.xml" value="0.4905" />
@@ -14,28 +16,32 @@
         <entry key="app/src/main/res/layout/HiraganaHomepageActivity.xml" value="0.34427083333333336" />
         <entry key="app/src/main/res/layout/activity_first_logon.xml" value="0.4135543823242187" />
         <entry key="app/src/main/res/layout/activity_flashcard.xml" value="0.5911458333333334" />
-        <entry key="app/src/main/res/layout/activity_hiragana_homepage.xml" value="0.47724477244772445" />
-        <entry key="app/src/main/res/layout/activity_hiragana_viewer.xml" value="0.40166575113932296" />
-        <entry key="app/src/main/res/layout/activity_info.xml" value="0.5537267049153646" />
-        <entry key="app/src/main/res/layout/activity_main.xml" value="0.29713509856813247" />
+        <entry key="app/src/main/res/layout/activity_hiragana_homepage.xml" value="0.3902087832973362" />
+        <entry key="app/src/main/res/layout/activity_hiragana_viewer.xml" value="0.2751983642578125" />
+        <entry key="app/src/main/res/layout/activity_info.xml" value="0.3254022134316934" />
+        <entry key="app/src/main/res/layout/activity_lesson.xml" value="0.4002034505208334" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.4579737040522722" />
+        <entry key="app/src/main/res/layout/activity_new_review.xml" value="0.47413991292317714" />
         <entry key="app/src/main/res/layout/activity_quiz.xml" value="0.5091210613598673" />
+        <entry key="app/src/main/res/layout/activity_review.xml" value="0.6134633382161458" />
         <entry key="app/src/main/res/layout/activity_setup.xml" value="0.4401041666666667" />
-        <entry key="app/src/main/res/layout/activity_stats.xml" value="0.7432317097981771" />
+        <entry key="app/src/main/res/layout/activity_stats.xml" value="0.26153564453125" />
         <entry key="app/src/main/res/layout/activity_user_progress.xml" value="0.5420740763346353" />
         <entry key="app/src/main/res/layout/cardview_item_char.xml" value="0.5635416666666667" />
         <entry key="app/src/main/res/layout/cardview_item_hiragana.xml" value="0.4353128794077281" />
-        <entry key="app/src/main/res/layout/fragment_flashcard.xml" value="0.26576538085937507" />
+        <entry key="app/src/main/res/layout/fragment_flashcard.xml" value="0.27179107666015634" />
         <entry key="app/src/main/res/layout/fragment_quiz.xml" value="0.6387807210286458" />
         <entry key="app/src/main/res/layout/fragment_well_done.xml" value="0.5943048004368798" />
         <entry key="app/src/main/res/layout/goals_popup.xml" value="0.4097895304361979" />
-        <entry key="app/src/main/res/layout/info_entry.xml" value="0.5579937304075235" />
+        <entry key="app/src/main/res/layout/info_entry.xml" value="0.4053156146179402" />
         <entry key="app/src/main/res/layout/info_row.xml" value="0.5911458333333334" />
         <entry key="app/src/main/res/layout/info_row_item.xml" value="0.5911458333333334" />
         <entry key="app/src/main/res/layout/lesson_activity.xml" value="0.2613174438476563" />
         <entry key="app/src/main/res/layout/list_info_entries.xml" value="0.4548878987630208" />
         <entry key="app/src/main/res/layout/popup.xml" value="0.3722196784152453" />
+        <entry key="app/src/main/res/layout/popup_warning.xml" value="0.37284342447916663" />
         <entry key="app/src/main/res/layout/slide_screen.xml" value="0.4401041666666667" />
-        <entry key="app/src/main/res/layout/slider_layout.xml" value="0.5911458333333334" />
+        <entry key="app/src/main/res/layout/slider_layout.xml" value="0.1959954671351513" />
       </map>
     </option>
   </component>

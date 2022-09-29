@@ -17,24 +17,144 @@
             android:id="@+id/goToHiraganaHomepage"
             android:layout_width="wrap_content"
             android:layout_height="50dp"
-            android:layout_marginTop="24dp"
-            android:text="Continue"
+            android:layout_marginTop="412dp"
+            android:text="Start Studying"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintHorizontal_bias="0.531"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/image_header" />
 
         <ImageView
             android:id="@+id/image_header"
-            android:layout_width="318dp"
-            android:layout_height="174dp"
-            android:layout_marginTop="92dp"
+            android:layout_width="330dp"
+            android:layout_height="188dp"
+            android:layout_marginTop="16dp"
             android:paddingBottom="20dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.494"
+            app:layout_constraintHorizontal_bias="0.602"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/mishima_barakei" />
+            app:srcCompat="@drawable/sada_title"
+            />
+
+        <ImageView
+            android:id="@+id/goal_2"
+            android:layout_width="98dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goal_1"
+            app:srcCompat="@drawable/goal_circle" />
+
+        <ImageView
+            android:id="@+id/goal_3"
+            android:layout_width="98dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/goal_2"
+            app:srcCompat="@drawable/goal_circle" />
+
+        <ImageView
+            android:id="@+id/goal_1"
+            android:layout_width="98dp"
+            android:layout_height="105dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_header"
+            app:srcCompat="@drawable/goal_circle" />
+
+        <TextView
+            android:id="@+id/tv_hiragana_studied"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="40dp"
+            android:text="Hiragana \nStudied : "
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/image_header" />
+
+        <TextView
+            android:id="@+id/tv_current_streak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="60dp"
+            android:text="Current \nStreak : "
+            android:textColor="@color/white"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hiragana_studied" />
+
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="176dp"
+            android:text="Days To \nReach Goal : "
+            android:textColor="@color/white"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_hiragana_studied" />
+
+        <TextView
+            android:id="@+id/tv_hiragana_studied_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/goal_1"
+            app:layout_constraintEnd_toEndOf="@+id/goal_1"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="@+id/goal_1"
+            app:layout_constraintTop_toTopOf="@+id/goal_1"
+            app:layout_constraintVertical_bias="0.448" />
+
+        <TextView
+            android:id="@+id/tv_current_streak_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/goal_2"
+            app:layout_constraintEnd_toEndOf="@+id/goal_2"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="@+id/goal_2"
+            app:layout_constraintTop_toTopOf="@+id/goal_2"
+            app:layout_constraintVertical_bias="0.448" />
+
+        <TextView
+            android:id="@+id/tv_days_to_goal_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/goal_3"
+            app:layout_constraintEnd_toEndOf="@+id/goal_3"
+            app:layout_constraintHorizontal_bias="0.482"
+            app:layout_constraintStart_toStartOf="@+id/goal_3"
+            app:layout_constraintTop_toTopOf="@+id/goal_3"
+            app:layout_constraintVertical_bias="0.448" />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

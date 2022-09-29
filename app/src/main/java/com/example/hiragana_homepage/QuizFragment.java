@@ -1,13 +1,11 @@
 package com.example.hiragana_homepage;
 
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
 import android.os.Bundle;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 
 import android.os.Handler;
@@ -24,38 +22,38 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link QuizFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Quiz fragment used to quiz user on characters as part of a Lesson.
+ *
+ * @author joelgodfrey
  */
 public class QuizFragment extends Fragment {
 
     private static final String ARRAY_KEY = "array_key";
     private Parcelable_Array mParcelable_array;
 
-    String optionSelectedByUser = "";
-    private Handler mHandler = new Handler();
-    Hiragana_character top_left_char = new Hiragana_character();
-    Hiragana_character top_right_char = new Hiragana_character();
-    Hiragana_character bottom_left_char = new Hiragana_character();
-    Hiragana_character bottom_right_char = new Hiragana_character();
+    private String optionSelectedByUser = "";
+    private final Handler mHandler = new Handler();
+    private Hiragana_character top_left_char = new Hiragana_character();
+    private Hiragana_character top_right_char = new Hiragana_character();
+    private Hiragana_character bottom_left_char = new Hiragana_character();
+    private Hiragana_character bottom_right_char = new Hiragana_character();
 
-    LinearLayout top_left;
-    LinearLayout top_right;
-    LinearLayout bottom_left;
-    LinearLayout bottom_right;
-    TextView charBeingStudied;
+    private LinearLayout top_left;
+    private LinearLayout top_right;
+    private LinearLayout bottom_left;
+    private LinearLayout bottom_right;
+    private TextView charBeingStudied;
 
-    ImageView bottom_right_img;
-    ImageView bottom_left_img;
-    ImageView top_right_img;
-    ImageView top_left_img;
+    private ImageView bottom_right_img;
+    private ImageView bottom_left_img;
+    private ImageView top_right_img;
+    private ImageView top_left_img;
 
-    ArrayList<ArrayList> arrayBank;
-    ArrayList<Hiragana_character> currentArray;
-    Hiragana_character keyChar = new Hiragana_character();
+    private ArrayList<ArrayList> arrayBank;
+    private ArrayList<Hiragana_character> currentArray;
+    private Hiragana_character keyChar = new Hiragana_character();
 
-    Lesson_Activity lesson_activity;
+    private Lesson_Activity lesson_activity;
 
     private long mLastClickTime = 0;
 
@@ -79,10 +77,11 @@ public class QuizFragment extends Fragment {
         }
     }
 
-    public void setUpImages(ImageView iv_1, ImageView iv_2, ImageView iv_3, ImageView iv_4, TextView tv, ArrayList al){
+    public void setUpImages(ImageView iv_1, ImageView iv_2, ImageView iv_3,
+                            ImageView iv_4, TextView tv, ArrayList al){
         // Here we feed it the parcelable'd four numbers, which includes keychar at index [0].
         Hiragana_character key_c = (Hiragana_character) al.get(0);
-        //Here we add the four to a new ArrayList and shuffle them so that they appear in random positions.
+        //Here we add the 4 to a new ArrayList and shuffle them so that they appear randomly.
         ArrayList<Hiragana_character> fourNumbers = new ArrayList();
         fourNumbers.addAll(al);
         Collections.shuffle(fourNumbers);
@@ -97,20 +96,23 @@ public class QuizFragment extends Fragment {
         key_c.setDrawable();
         tv.setText(key_c.getLatinCharacter());
         optionSelectedByUser = "";
-        lesson_activity.decrement_counter--;
+        lesson_activity.setDecrement_counter(lesson_activity.getDecrement_counter()-1);
         keyChar = key_c;
     }
 
-    private Runnable mResetPage = new Runnable() {
+    private final Runnable mResetPage = new Runnable() {
         @Override
         public void run() {
-            if(lesson_activity.decrement_counter >= 0) {
-                currentArray = arrayBank.get(lesson_activity.decrement_counter);
-                setUpImages(top_left_img, top_right_img, bottom_left_img, bottom_right_img, charBeingStudied, currentArray);
+            if(lesson_activity.getDecrement_counter() >= 0) {
+                currentArray = arrayBank.get(lesson_activity.getDecrement_counter());
+                setUpImages(top_left_img, top_right_img, bottom_left_img, bottom_right_img,
+                        charBeingStudied, currentArray);
                 resetViews();
-            } else if (lesson_activity.page_num == lesson_activity.lesson_chars.size()*2-1) {
-                lesson_activity.atEnd = true;
-                lesson_activity.loadWellDoneScreen();
+            } else if (lesson_activity.getPage_num() == lesson_activity
+                    .getLesson_chars().size()*2-1) {
+                lesson_activity.setAtEnd(true);
+                lesson_activity.loadWellDoneScreen(lesson_activity.getSharedPreferencesHandler(),
+                        lesson_activity.getHiraganaInitialiser());
             }
              else {
                 lesson_activity.loadNextFlashcard();
@@ -119,9 +121,11 @@ public class QuizFragment extends Fragment {
     };
 
 
-    private void revealAnswer(LinearLayout topLeft, LinearLayout topRight, LinearLayout bottomLeft, LinearLayout bottomRight){
+    private void revealAnswer(LinearLayout topLeft, LinearLayout topRight, LinearLayout bottomLeft,
+                              LinearLayout bottomRight){
         int correctGreen = Color.parseColor("#00C853");
-        ColorFilter correctGreenFilter = new PorterDuffColorFilter(correctGreen, PorterDuff.Mode.MULTIPLY);
+        ColorFilter correctGreenFilter = new PorterDuffColorFilter(correctGreen,
+                PorterDuff.Mode.MULTIPLY);
         if(top_left_char.getLatinCharacter().equals(keyChar.getLatinCharacter())){
             topLeft.setBackgroundResource(R.drawable.round_back_green10);
             top_left_img.setColorFilter(correctGreenFilter);
@@ -178,12 +182,8 @@ public class QuizFragment extends Fragment {
         lesson_activity = (Lesson_Activity)getActivity();
 
         arrayBank = mParcelable_array.getmParcelableArray();
-        // Need to iterate this each time! When they press continue.
-        // greyING OUT FOR A SEONCcurrentArray = arrayBank.get(lesson_activity.quizFragmentCounter);
-        //decrementCounter = lesson_activity.currentCharNumber;
-        //currentArray = arrayBank.get(decrementCounter);
-        lesson_activity.decrement_counter = lesson_activity.currentCharNumber;
-        currentArray = arrayBank.get(lesson_activity.decrement_counter);
+        lesson_activity.setDecrement_counter(lesson_activity.getCurrentCharNumber());
+        currentArray = arrayBank.get(lesson_activity.getDecrement_counter());
 
 
         top_left.setOnClickListener(new View.OnClickListener() {
@@ -243,13 +243,13 @@ public class QuizFragment extends Fragment {
             public void onClick(View v) {
                 if(!optionSelectedByUser.isEmpty()) {
                     // These lines prevent the user clicking several times and skipping characters.
-                    if (SystemClock.elapsedRealtime() - mLastClickTime < 1700){
+                    if (SystemClock.elapsedRealtime() - mLastClickTime < 1200){
                         return;
                     }
                     mLastClickTime = SystemClock.elapsedRealtime();
 
                     revealAnswer(top_left, top_right, bottom_left, bottom_right);
-                    mHandler.postDelayed(mResetPage, 1500);
+                    mHandler.postDelayed(mResetPage, 1000);
                 }
             }
         });

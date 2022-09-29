@@ -7,27 +7,35 @@ import androidx.annotation.DrawableRes;
 
 import com.google.gson.annotations.SerializedName;
 
+
+/**
+ * Class used to create HiraganaCharacter objects and make them parcelable.
+ *
+ * @author joelgodfrey
+ */
 public class Hiragana_character implements Parcelable {
     @SerializedName("latin")
-    String latinCharacter;
+    private String latinCharacter;
     @SerializedName("hiragana")
-    String hiraganaCharacter;
-    String mnemonic;
-    int thumbnail;
-    int audio;
+    private String hiraganaCharacter;
+    private String mnemonic;
+    private int thumbnail;
+    private int audio;
+    private int mnemonicImage;
 
+
+    // Public, used to create char without having to provide all fields immediately.
     public Hiragana_character() {
-
     }
 
-    //Parcelable bits start
-// Should this guy be public like in the video?
+    //Parcelable Implementation begins
     protected Hiragana_character(Parcel in) {
         latinCharacter = in.readString();
         hiraganaCharacter = in.readString();
         mnemonic = in.readString();
         thumbnail = in.readInt();
         audio = in.readInt();
+        mnemonicImage = in.readInt();
     }
 
     public static final Creator<Hiragana_character> CREATOR = new Creator<Hiragana_character>() {
@@ -48,7 +56,7 @@ public class Hiragana_character implements Parcelable {
     }
 
 
-    //Remember have to read and write in the same order!
+    //Remember to read and write in the same order.
     @Override
     public void writeToParcel(Parcel parcel, int i) {
         parcel.writeString(latinCharacter);
@@ -56,6 +64,7 @@ public class Hiragana_character implements Parcelable {
         parcel.writeString(mnemonic);
         parcel.writeInt(thumbnail);
         parcel.writeInt(audio);
+        parcel.writeInt(mnemonicImage);
     }
 
     //Parcelable bits end
@@ -85,12 +94,17 @@ public class Hiragana_character implements Parcelable {
         this.mnemonic = mnemonic;
     }
 
-    public Hiragana_character(String latinCharacter, String hiraganaCharacter, String mnemonic, int thumbnail, int audio) {
+    public int getMnemonicImage() {
+        return mnemonicImage;
+    }
+
+    public Hiragana_character(String latinCharacter, String hiraganaCharacter, String mnemonic, int thumbnail, int audio, int mnemonicImage) {
         this.latinCharacter = latinCharacter;
         this.hiraganaCharacter = hiraganaCharacter;
         this.mnemonic = mnemonic;
         this.thumbnail = thumbnail;
         this.audio = audio;
+        this.mnemonicImage = mnemonicImage;
     }
 
     public int getThumbnail() {
@@ -108,6 +122,14 @@ public class Hiragana_character implements Parcelable {
     public void setAudio(int audio) {
         this.audio = audio;
     }
+
+    public void setMnemonicImage(int mnemonicImage) {
+        this.mnemonicImage = mnemonicImage;
+    }
+
+    /**
+     * Method to fetch the associated audio file of a Hiragana object.
+     */
 
     public void setAudioFile() {
         String latinChar = getLatinCharacter();
@@ -253,6 +275,160 @@ public class Hiragana_character implements Parcelable {
         }
     }
 
+    /**
+     * Method to fetch the associated mnemonic image file of a Hiragana object.
+     */
+
+    public void addMnemonicImage() {
+        String latinChar = getLatinCharacter();
+        switch (latinChar) {
+            case "a":
+                setMnemonicImage(R.drawable.a_mnemonic);
+                break;
+            case "i":
+                setMnemonicImage(R.drawable.i_mnemonic);
+                break;
+            case "u":
+                setMnemonicImage(R.drawable.u_mnemonic);
+                break;
+            case "e":
+                setMnemonicImage(R.drawable.e_mnemonic);
+                break;
+            case "o":
+                setMnemonicImage(R.drawable.o_mnemonic);
+                break;
+            case "ka":
+                setMnemonicImage(R.drawable.ka_mnemonic);
+                break;
+            case "ki":
+                setMnemonicImage(R.drawable.ki_mnemonic);
+                break;
+            case "ku":
+                setMnemonicImage(R.drawable.ku_mnemonic);
+                break;
+            case "ke":
+                setMnemonicImage(R.drawable.ke_mnemonic);
+                break;
+            case "ko":
+                setMnemonicImage(R.drawable.ko_mnemonic);
+                break;
+            case "sa":
+                setMnemonicImage(R.drawable.sa_mnemonic);
+                break;
+            case "shi":
+                setMnemonicImage(R.drawable.shi_mnemonic);
+                break;
+            case "su":
+                setMnemonicImage(R.drawable.su_mnemonic);
+                break;
+            case "se":
+                setMnemonicImage(R.drawable.se_mnemonic);
+                break;
+            case "so":
+                setMnemonicImage(R.drawable.so_mnemonic);
+                break;
+            case "ta":
+                setMnemonicImage(R.drawable.ta_mnemonic);
+                break;
+            case "chi":
+                setMnemonicImage(R.drawable.chi_mnemonic);
+                break;
+            case "tsu":
+                setMnemonicImage(R.drawable.tsu_mnemonic);
+                break;
+            case "te":
+                setMnemonicImage(R.drawable.te_mnemonic);
+                break;
+            case "to":
+                setMnemonicImage(R.drawable.to_mnemonic);
+                break;
+            case "na":
+                setMnemonicImage(R.drawable.na_mnemonic);
+                break;
+            case "ni":
+                setMnemonicImage(R.drawable.ni_mnemonic);
+                break;
+            case "nu":
+                setMnemonicImage(R.drawable.nu_mnemonic);
+                break;
+            case "ne":
+                setMnemonicImage(R.drawable.ne_mnemonic);
+                break;
+            case "no":
+                setMnemonicImage(R.drawable.no_mnemonic);
+                break;
+            case "ha":
+                setMnemonicImage(R.drawable.ha_mnemonic);
+                break;
+            case "hi":
+                setMnemonicImage(R.drawable.hi_mnemonic);
+                break;
+            case "fu":
+                setMnemonicImage(R.drawable.fu_mnemonic);
+                break;
+            case "he":
+                setMnemonicImage(R.drawable.he_mnemonic);
+                break;
+            case "ho":
+                setMnemonicImage(R.drawable.ho_mnemonic);
+                break;
+            case "ma":
+                setMnemonicImage(R.drawable.ma_mnemonic);
+                break;
+            case "mi":
+                setMnemonicImage(R.drawable.mi_mnemonic);
+                break;
+            case "mu":
+                setMnemonicImage(R.drawable.mu_mnemonic);
+                break;
+            case "me":
+                setMnemonicImage(R.drawable.me_mnemonic);
+                break;
+            case "mo":
+                setMnemonicImage(R.drawable.mo_mnemonic);
+                break;
+            case "ya":
+                setMnemonicImage(R.drawable.ya_mnemonic);
+                break;
+            case "yu":
+                setMnemonicImage(R.drawable.yu_mnemonic);
+                break;
+            case "yo":
+                setMnemonicImage(R.drawable.yo_mnemonic);
+                break;
+            case "ra":
+                setMnemonicImage(R.drawable.ra_mnemonic);
+                break;
+            case "ri":
+                setMnemonicImage(R.drawable.ri_mnemonic);
+                break;
+            case "ru":
+                setMnemonicImage(R.drawable.ru_mnemonic);
+                break;
+            case "re":
+                setMnemonicImage(R.drawable.re_mnemonic);
+                break;
+            case "ro":
+                setMnemonicImage(R.drawable.ro_mnemonic);
+                break;
+            case "wa":
+                setMnemonicImage(R.drawable.wa_mnemonic);
+                break;
+            case "wo":
+                setMnemonicImage(R.drawable.wo_mnemonic);
+                break;
+            case "n":
+                setMnemonicImage(R.drawable.n_mnemonic);
+                break;
+            default:
+                setMnemonicImage(R.drawable.a_mnemonic);
+        }
+    }
+
+    /**
+     * Method to fetch the associated drawable file of a Hiragana object.
+     */
+
     public void setDrawable(){
         String latinChar = getLatinCharacter();
         switch (latinChar) {
@@ -395,7 +571,7 @@ public class Hiragana_character implements Parcelable {
                 setThumbnail(R.drawable.n);
                 break;
             default:
-                setThumbnail(R.drawable.mishima_barakei);
+                setThumbnail(R.drawable.a);
         }
     }
 

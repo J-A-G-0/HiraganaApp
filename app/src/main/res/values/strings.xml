@@ -15,15 +15,39 @@
         \n So, what next? You can continue to review the Hiragana here, until you feel completely comfortable with all of them.
         We would also recommeding that you check out some of the other great Japanese learning resources out there.
         For more in-depth advice, why not visit the Information page! </string>
-    <string name="infoRecommendedMaterials">Placeholder</string>
-    <string name="infoStrugglingSimilar">Placeholder</string>
-    <string name="infoStrugglingListening">Placeholder</string>
-    <string name="infoWriting">Placeholder</string>
-    <string name="infoWhatNext">Placeholder</string>
+    <string name="infoRecommendedMaterials">We strongly recommend using this app in conjunction with other learning materials,
+        particularly those which use a \‘Spaced Repetition System\’ such as Duolingo or the popular Anki app.
+        \nFor detailed, up-to-date advice, you might like to check out these popular Japanese-learning sites:
+        \n\n https://www.reddit.com/r/LearnJapanese\
+        \n https://www.tofugu.com/\ </string>
+    <string name="infoStrugglingSimilar">One of the most difficult things early on in your Hiragana journey can be distinguishing between some of the more similar-looking characters, such as あ and お.
+        You may find this site useful in helping pinpoint the ways in which to tell such characters apart:
+        \n\n https://www.brighthubeducation.com/learning-japanese/54674-remembering-hiragana/
+        \n\nYou might also want to try writing them out yourself, so that you can get a feel for the way they differ.</string>
+    <string name="pronunciationDifficulty">Pronunciation is unfortunately one thing that this app is not well-equipped to help you with, but do not despair!
+        There is a wealth of information online for free about pronunciation of Japanese.
+        Here are a couple that we thought were particularly good:
+        \n\n General Pronunciation: \nhttps://www.youtube.com/watch?v=WH0UX5oQVzM
+        \n\n The "ら、り、る、れ、ろ" sound: \n https://www.youtube.com/watch?v=6-ERE23YP88 </string>
+    <string name="infoWriting">While we do not think that writing Hiragana should necessarily be the focus for a beginning learner,
+        we can nonetheless see the appeal of being able to reproduce the characters that you’ve spent so much time studying!
+        In Japanese, there are normally guidelines on stroke orders when it comes to writing Hiragana, Katakana, or Kanji.
+        \nHere is a guide to these stroke orders:
+        \n\n https://happylilac.net/hiragana-rensyu-1.pdf </string>
+    <string name="infoWhatNext">So, you’ve learned all 46 Hiragana. Well done! That’s no small achievement.
+        You’re now ready to really step up your Japanese learning.
+        We would recommend continuing with your reviews here until you feel that you’ve got all 46 Hiragana down solidly.
+        While doing so, you can start to focus more on other learning materials, such as those listed above.
+        We would especially recommend one that incorporates Spaced Repetition, if you’re not already using one.
+        A particularly popular (and free!) option is Anki, for which there is a dedicated community online that have made many well-designed decks.
+        Again, we would recommend searching on: \nhttps://www.reddit.com/r/LearnJapanese\
+        for advice on some good decks. Anki itself can be found at this address:
+        \n\n https://apps.ankiweb.net/ </string>
+
 
     <string name="title_welcome">Welcome!</string>
     <string name="title_audio">Are you able to listen to audio?</string>
-    <string name ="title_otherMats">Is this the only way you\'re studying?</string>
+    <string name="title_otherMats">Is this the only way you\'re studying?</string>
     <string name="title_time">Do you have enough time?</string>
     <string name="title_conclusion">Let\'s get started!</string>
 
@@ -33,7 +57,7 @@
     <string name="desc_audio">
     \n While it is possible to complete the activities without audio, we would always recommend that
     you listen as you study, to better grasp the pronunciation of the different Hiragana.</string>
-    <string name ="desc_otherMats">\n We recommend using this app in conjunction with other Japanese
+    <string name="desc_otherMats">\n We recommend using this app in conjunction with other Japanese
     learning apps. Since we\'re only covering Hiragana here, we would strongly advise using our app
     in conjunction with a broader Japanese learning app. That way, you\'ll be seeing Hiragana in complete
     words from the beginning! </string>
@@ -44,5 +68,13 @@
     <string name="desc_conclusion">\n With that out of the way, let\'s get started on learning!
     \n\n Check out the info page if there\'s anything else you need help with.
     \n\n がんばってね！</string>
+
+    <string name="review_advice">It\'s great to see that how fast you\'re getting through new
+    lessons, but don\'t forget to go over what you\'ve already learned!
+    \n Research shows that the most effective learning is done in small bites that are built on, so
+    while it might be tempting to hurry through, we\'d recommend doing a few more reviews first.
+    \nOf course, you know what works for you, and if you\'re using another app for your reviews then
+    that works just as well! We just thought we\'d give you a heads up :)
+    \n\nKeep it up! </string>
 
 </resources>

@@ -1,14 +1,10 @@
 package com.example.hiragana_homepage;
 
-import static java.security.AccessController.getContext;
-
 import android.content.Context;
-import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.PorterDuff;
 import android.graphics.PorterDuffColorFilter;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,14 +14,12 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.w3c.dom.Text;
-
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.MyViewHolder> {
 
-    private Context mContext;
-    private ArrayList<Hiragana_character> mData;
+    private final Context mContext;
+    private final ArrayList<Hiragana_character> mData;
 
     public RecyclerViewAdapter(Context mContext, ArrayList<Hiragana_character> mData) {
         this.mContext = mContext;
@@ -47,7 +41,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
 
         //What's going on here then, need to set this to 'current level'?
-        UserProgress up = new UserProgress(mContext.getApplicationContext());
+        SharedPreferencesHandler up = new SharedPreferencesHandler(mContext.getApplicationContext());
         up.setSp();
         //Here we make a temporary string of the current char's latinChar.
         String temp_char = mData.get(position).getLatinCharacter();
@@ -82,18 +76,18 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     // Method to set strings for each character dependent on the user's previous scores.
 public String getProgressMsg(String prog_str) {
-        String progressMsg = new String();
+        String progressMsg = "";
         Integer prog_int = Integer.valueOf(prog_str);
         if(prog_int == 0){
             progressMsg = "Not Studied";
         } else if(prog_int > 0 && prog_int < 4) {
-            progressMsg = "Beginner";
+            progressMsg = "Grade C";
         } else if(prog_int > 3 && prog_int < 7) {
-            progressMsg = "Good";
+            progressMsg = "Grade B";
         } else if(prog_int > 6 && prog_int < 10) {
-            progressMsg = "Excellent";
+            progressMsg = "Grade A";
         } else if(prog_int == 10) {
-            progressMsg = "Master";
+            progressMsg = "Mastered";
         }
         return progressMsg;
 }

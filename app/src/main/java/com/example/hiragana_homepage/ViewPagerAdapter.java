@@ -13,20 +13,25 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import org.w3c.dom.Text;
 
+/**
+ * Class for ViewPager adapter used in onboarding.
+ *
+ * @author joelgodfrey
+ */
 public class ViewPagerAdapter extends PagerAdapter {
 
-    Context context;
+    private final Context context;
 
-    int[] images = {
+    private final int[] images = {
 
-            R.drawable.a,
+            R.drawable.sada_title,
             R.drawable.ic_baseline_headphones_24,
             R.drawable.ic_baseline_escalator_warning_24,
             R.drawable.ic_baseline_access_time_filled_24,
             R.drawable.ic_baseline_rocket_launch_24
     };
 
-    int[] headings = {
+    private final int[] headings = {
 
             R.string.title_welcome,
             R.string.title_audio,
@@ -35,7 +40,7 @@ public class ViewPagerAdapter extends PagerAdapter {
             R.string.title_conclusion
     };
 
-    int[] description = {
+    private final int[] description = {
 
             R.string.desc_welcome,
             R.string.desc_audio,
@@ -63,7 +68,7 @@ public class ViewPagerAdapter extends PagerAdapter {
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
 
-        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View view = layoutInflater.inflate(R.layout.slider_layout, container, false);
 
         ImageView slideTitleImage = (ImageView) view.findViewById(R.id.titleImage);

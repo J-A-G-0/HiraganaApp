@@ -24,9 +24,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link FlashcardFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Flashcard Fragment for displaying Hiragana character flashcards.
+ *
+ * @author joelgodfrey
  */
 public class FlashcardFragment extends Fragment {
 
@@ -38,7 +38,12 @@ public class FlashcardFragment extends Fragment {
         // Required empty public constructor
     }
 
-    //This is the blueprint for making a Flashcardfragment, it takes a Hiragana character 'h', creates a fragment, and returns it.
+    /**
+     * Blueprint for creating Flashcard fragments.
+     * Takes a Hiragana character 'h', creates the fragment and returns it.
+     * @param h
+     * @return fragment
+     */
     public static FlashcardFragment newInstance(Hiragana_character h) {
         FlashcardFragment fragment = new FlashcardFragment();
         Bundle bundle = new Bundle();
@@ -56,10 +61,20 @@ public class FlashcardFragment extends Fragment {
 
     }
 
+
+    /**
+     * Method for creating the fragment view.
+     * Fragment is created and retrieves the char_key bundle that was put as an extra.
+     * char_key is used to setup the fragment.
+     * @param inflater
+     * @param container
+     * @param savedInstanceState
+     * @return View
+     */
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        //Here, the Fragment view is created and retrieves the bundle, char_key.
+
         mCharForFlashcard = (Hiragana_character) getArguments().getParcelable(CHAR_KEY);
         View view = inflater.inflate(R.layout.fragment_flashcard, container, false);
         ImageView imv = (ImageView) view.findViewById(R.id.flashcardImage);
@@ -71,8 +86,21 @@ public class FlashcardFragment extends Fragment {
         imv.setImageResource(mCharForFlashcard.getThumbnail());
         tv_mnemonic.setText(mCharForFlashcard.getMnemonic());
 
+        btn_drawing.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imv.setImageResource(mCharForFlashcard.getMnemonicImage());
+            }
+        });
+
+        btn_hiragana.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                imv.setImageResource(mCharForFlashcard.getThumbnail());
+            }
+        });
+
         return view;
     }
-
 
 }

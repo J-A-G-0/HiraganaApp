@@ -21,7 +21,7 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/button_i"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/mishima_barakei" />
+            app:srcCompat="@drawable/sada_title" />
 
         <LinearLayout
             android:id="@+id/nextStudy_view"
@@ -544,11 +544,25 @@
             android:id="@+id/button_info"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#C5BCF6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button_home"
+            app:srcCompat="@drawable/ic_baseline_info_24"
+            app:tint="@color/white" />
+
+        <ImageButton
+            android:id="@+id/button_home"
+            android:layout_marginStart="4dp"
+
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:backgroundTint="#C5BCF6"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_info_24"
-            app:tint="@color/white" />
+            app:srcCompat="@drawable/ic_baseline_home_24"
+             />
 
         <ImageButton
             android:id="@+id/button_stats"

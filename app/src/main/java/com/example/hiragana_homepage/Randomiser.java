@@ -7,13 +7,23 @@ import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
+/**
+ * Class for methods involving random generation of HiraganaCharacter objects.
+ *
+ * @author joelgodfrey
+ */
 public class Randomiser {
-    ArrayList fourNumbers = new ArrayList();
+    private final ArrayList fourNumbers = new ArrayList();
 
     public ArrayList getFourNumbers() {
         return fourNumbers;
     }
 
+    /**
+     * Return four random characters from provided ArrayList.
+     * @param a
+     * @return four HiraganaCharacter objects.
+     */
     public ArrayList generateNumbers(ArrayList a) {
         Random rand = new Random();
         int numberOfElements = 4;
@@ -29,8 +39,11 @@ public class Randomiser {
         return getFourNumbers();
     }
 
-
-
+    /**
+     * Randomly select character from given arraylist to be the 'keychar' for lessons.
+     * @param a
+     * @return
+     */
     public Hiragana_character generateKeyChar(ArrayList a) {
         Random rand = new Random();
         ArrayList finalFour = a;
@@ -40,15 +53,14 @@ public class Randomiser {
         return keyChar;
     }
 
+    /**
+     * Get a random HiraganaCharacter object from an ArrayList.
+     * @param a
+     * @return
+     */
     public Hiragana_character getRandomHiragana(ArrayList a) {
         Random rand = new Random();
         return (Hiragana_character) a.get(rand.nextInt(a.size()));
-    }
-
-    public Integer generateRandomNumber(Integer i){
-        Random rand = new Random();
-        Integer rand_num = rand.nextInt(i);
-        return rand_num;
     }
 
 }

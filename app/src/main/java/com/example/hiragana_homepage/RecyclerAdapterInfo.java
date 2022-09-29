@@ -1,5 +1,6 @@
 package com.example.hiragana_homepage;
 
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +12,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
+/**
+ * Adapter for recyclerview used in Info Activity.
+ */
+
 public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInfo.ViewHolder> {
 
     private static final String TAG = "InfoAdapter";
-    List<InfoEntry> entriesList;
+    private final List<InfoEntry> entriesList;
 
     public RecyclerAdapterInfo(List<InfoEntry> entriesList) {
         this.entriesList = entriesList;
@@ -23,7 +28,8 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.info_entry, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.info_entry,
+                parent, false);
         return new ViewHolder(view);
     }
 
@@ -53,6 +59,7 @@ public class RecyclerAdapterInfo extends RecyclerView.Adapter<RecyclerAdapterInf
 
             titleTextView = itemView.findViewById(R.id.tv_entry_name);
             contentsTextView = itemView.findViewById(R.id.tv_entry_contents);
+            contentsTextView.setMovementMethod(LinkMovementMethod.getInstance());
             expandableLayout = itemView.findViewById(R.id.expandableLayout);
 
             titleTextView.setOnClickListener(new View.OnClickListener() {

@@ -1,5 +1,10 @@
 package com.example.hiragana_homepage;
 
+/**
+ * Class for InfoEntry objects used in Info page.
+ *
+ * @author joelgodfrey
+ */
 public class InfoEntry {
 
     private String title;

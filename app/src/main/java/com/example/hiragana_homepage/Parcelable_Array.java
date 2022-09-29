@@ -5,8 +5,13 @@ import android.os.Parcelable;
 
 import java.util.ArrayList;
 
+/**
+ * Class for creating parcelable arrays that can be passed between activities.
+ *
+ * @author joelgodfrey
+ */
 public class Parcelable_Array implements Parcelable {
-    private ArrayList mParcelableArray;
+    private final ArrayList mParcelableArray;
 
     public Parcelable_Array(ArrayList arrayList){
         this.mParcelableArray = arrayList;
@@ -16,7 +21,8 @@ public class Parcelable_Array implements Parcelable {
         return mParcelableArray;
     }
 
-    public Parcelable_Array (Parcel parcel) {
+    public Parcelable_Array (Parcel parcel)
+    {
         this.mParcelableArray = parcel.readArrayList(null);
     }
 

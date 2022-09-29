@@ -9,16 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-import java.util.Locale;
-
 /**
- * A simple {@link Fragment} subclass.
- * Use the {@link WellDoneFragment#newInstance} factory method to
- * create an instance of this fragment.
+ * Fragment used in Lesson to give users well done.
  */
 public class WellDoneFragment extends Fragment {
 
@@ -29,7 +21,7 @@ public class WellDoneFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    Lesson_Activity lesson_activity;
+    private Lesson_Activity lesson_activity;
 
     public WellDoneFragment() {
         // Required empty public constructor
@@ -61,8 +53,8 @@ public class WellDoneFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_well_done, container, false);
 
         lesson_activity = (Lesson_Activity) getActivity();
-        // Re-initialise up here, so that the new Hiragana that have just been studied are added to SP().
-        lesson_activity.up.setUpUp();
+        // Re-initialise up here, so =  new Hiragana that have just been studied are added to SP().
+        lesson_activity.getSharedPreferencesHandler().setUpSp();
 
         TextView tv_current_num_studied = (TextView) view.findViewById(R.id.tv_current_num_studied);
 
@@ -78,14 +70,16 @@ public class WellDoneFragment extends Fragment {
         if(current_num_studied == 46) {
             setCompletionMessageText(tv_num_studied);
             //Check if deadlineSet is true.
-            // There is no need to check if the deadline has been exceeded here, since that is done on startup and if it has the value of the boolean is set to false.
-            // Therefore this line is checking if they are within the deadline, and has already checked if they're at 46 / 46.
-            if(lesson_activity.up.getSp().getBoolean("deadlineSet", false)){
-                // Set the special congrats for meeting their goal. This can just replace the number counter.
+
+            if(lesson_activity.getSharedPreferencesHandler().getSp()
+                    .getBoolean("deadlineSet", false)){
+                // Set the special congrats for meeting their goal.
                 tv_num_studied.setText(getResources().getString(R.string.doneByDeadline));
                 }
         } else {
-            tv_num_studied.setText("You've now studied \n" + String.valueOf(lesson_activity.getNumberOfHiraganaStudied()) + " / 46 Hiragana! \n\n Keep it up!");
+            tv_num_studied.setText
+                    ("You've now studied \n" + lesson_activity.getNumberOfHiraganaStudied()
+                            + " / 46 Hiragana! \n\n Keep it up!");
         }
     }
 

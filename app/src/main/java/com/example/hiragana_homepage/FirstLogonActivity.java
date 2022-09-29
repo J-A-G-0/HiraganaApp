@@ -11,14 +11,20 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+/**
+ * Class for displaying onboarding screens on first load of the app.
+ *
+ * @author joelgodfrey
+ */
 public class FirstLogonActivity extends AppCompatActivity {
 
-    ViewPager mSlideViewPager;
-    LinearLayout mDotLayout;
-    Button backbtn, nextbtn;
+    private ViewPager mSlideViewPager;
+    private LinearLayout mDotLayout;
+    private Button backbtn;
+    private Button nextbtn;
 
-    TextView[] dots;
-    ViewPagerAdapter viewPagerAdapter;
+    private TextView[] dots;
+    private ViewPagerAdapter viewPagerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +55,8 @@ public class FirstLogonActivity extends AppCompatActivity {
                     mSlideViewPager.setCurrentItem(getItem(1), true);
                 else {
 
-                    Intent i = new Intent(FirstLogonActivity.this, MainActivity.class);
+                    Intent i = new Intent(FirstLogonActivity.this,
+                            MainActivity.class);
                     startActivity(i);
                     finish();
 
@@ -69,6 +76,10 @@ public class FirstLogonActivity extends AppCompatActivity {
         mSlideViewPager.addOnPageChangeListener(viewListener);
     }
 
+    /**
+     * Set up the dots showing progress through the onboarding screens.
+     * @param position
+     */
     public void setUpIndicator(int position) {
 
         dots = new TextView[5];

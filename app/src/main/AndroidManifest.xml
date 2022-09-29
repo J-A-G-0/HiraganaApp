@@ -16,22 +16,19 @@
             android:name=".InfoActivity"
             android:exported="false" />
         <activity
-            android:name=".HiraganaViewer"
+            android:name=".HiraganaViewerActivity"
             android:exported="false" />
         <activity
             android:name=".StatsActivity"
             android:exported="false" />
         <activity
-            android:name=".UserProgressActivity"
+            android:name=".ProgressBreakdownActivity"
             android:exported="false" />
         <activity
-            android:name=".SetupActivity"
+            android:name=".ReviewActivity"
             android:exported="false" />
         <activity
-            android:name=".QuizActivity"
-            android:exported="false" />
-        <activity
-            android:name=".HiraganaHomepage"
+            android:name=".HomeScreenActivity"
             android:exported="false" />
         <activity
             android:name=".Lesson_Activity"

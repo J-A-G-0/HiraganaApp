@@ -17,18 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="352dp"
-        android:layout_height="432dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_current_progress" />
 
     <Button
         android:id="@+id/button_progress_breakdown"
@@ -38,7 +27,7 @@
         android:text="Progress Breakdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_set_goal"
         app:layout_constraintVertical_bias="1.0" />
@@ -48,8 +37,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="28dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="68dp"
         android:text="current streak"
+        android:background="@drawable/round_back_babypink_10"
+        android:textColor="@color/white"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -61,6 +53,9 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="28dp"
         android:text="streak goal"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_babypink_10"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_current_streak" />
@@ -72,6 +67,9 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:text="days left"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_babypink_10"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_streak_goal" />
@@ -83,6 +81,9 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="64dp"
         android:text="Set a deadline challenge below!"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_babypink_10"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_days_until_streak_goal" />
@@ -94,9 +95,25 @@
         android:layout_marginStart="28dp"
         android:layout_marginTop="24dp"
         android:text="current progress"
+        android:textColor="@color/white"
+        android:background="@drawable/round_back_babypink_10"
+
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_days_until_deadline" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#C5BCF6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_baseline_arrow_back_24"
+        app:tint="@color/white"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

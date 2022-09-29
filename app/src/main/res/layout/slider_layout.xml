@@ -13,7 +13,7 @@
         android:layout_height="240dp"
         android:layout_marginTop="30dp"
         android:layout_gravity="center"
-        app:srcCompat="@drawable/sakaguchi_ango" />
+        app:srcCompat="@drawable/sada_title" />
 
     <TextView
         android:id="@+id/tvTitle"
